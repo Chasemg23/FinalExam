@@ -2,29 +2,31 @@
 #include <fstream>
 using namespace std;
 
-//void countLine(string pName);
-//void countChar(string pName);
+int countLine(string pName);
+int countChar(string pName);
 
 int main() {
 	string filename;
 	cout << "Enter file name\n";
 	cin >> filename;
-	ifstream ifs("filename.txt");
+	ifstream ifs(filename);
 	string str((istreambuf_iterator<char>(ifs)),istreambuf_iterator<char>());
 	cout << str; 
+	countChar(str);
+	countLine(str);
 	
 }
-/*
-void countLine(string pName){
+
+int countLine(string pName){
 
 
 }
 
-void countChar(string pName){
-	int count = 0;
-	int off
-	while (*(
+int countChar(string pName){
+	len = pName.length();
+	cout << len << " Characters";
+	return len;
 }
-*/
+
 
 
