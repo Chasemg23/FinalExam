@@ -2,7 +2,7 @@
 #include <fstream>
 using namespace std;
 
-int countLine(string pName);
+//int countLine(string pName);
 int countChar(string pName);
 
 int main() {
@@ -16,15 +16,21 @@ int main() {
 	countLine(str);
 	
 }
-
+/*
 int countLine(string pName){
-
-
+	int count = 0;
+	int pos = 0;
+	while ((pos = pName.IndexOf('\n', pos)) != -1) {
+		count++;
+		pos++;
+	}
+	return count;
 }
-
+*/
 int countChar(string pName){
+	int len;
 	len = pName.length();
-	cout << len << " Characters";
+	cout << endl << len << " Characters";
 	return len;
 }
 
